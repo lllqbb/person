@@ -3,3 +3,5 @@
 
 
 导航的颜色在bootstrap.css的4521行
+
+想要忽略的上传文件写在.gitignore里面
