@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="__STATIC__/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="__STATIC__/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="__STATIC__/admin/css/dashboard.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/my.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/index.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/animate.min.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/font-awesome.min.css">
+
+   <!--导航条-->
+    <script src="__STATIC__/index/js/jquery-2.0.0.min.js"></script>
+    <script src="__STATIC__/index/js/index.js"></script>
+    <!--响应式布局-->
+    <!--<link rel="stylesheet" href="__STATIC__/bootstrap-3.3.7-dist/css/bootstrap-combined.min.css">-->
+
+    <!--<script src="__STATIC__/bootstrap-3.3.7-dist/js/jquery-ui.js"></script>-->
+    <script src="__STATIC__/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!--<script src="__STATIC__/bootstrap-3.3.7-dist/js/jquery.ui.touch-punch.min.js"></script>-->
+    <!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+    <script src="__STATIC__/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<header id="b-public-nav" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" onclick="recordId('/',0)">
+                <div class="hidden-xs b-nav-background"></div>
+                <ul class="b-logo-code">
+                    <li class="b-lc-start">&lt;?php</li>
+                    <li class="b-lc-echo">echo</li>
+                </ul>
+                <p class="b-logo-word">'管理后台'</p>
+                <p class="b-logo-end">;</p>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav b-nav-parent">
+                <li class="hidden-xs b-nav-mobile" style="width: 55px; left: 143.969px;"></li>
+                <li class="b-nav-cname  ">
+                    <a href="/" onclick="recordId('/',0)">首页</a>
+                </li>
+                <li class="b-nav-cname ">
+                    <a href="https://baijunyao.com/category/27" onclick="return recordId('cid', '27')">PHP</a>
+                </li>
+                <li class="b-nav-cname ">
+                    <a href="https://baijunyao.com/category/28" onclick="return recordId('cid', '28')">前端</a>
+                </li>
+                <li class="b-nav-cname  b-nav-active ">
+                    <a href="https://baijunyao.com/category/29" onclick="return recordId('cid', '29')">Linux</a>
+                </li>
+                <li class="b-nav-cname ">
+                    <a href="https://baijunyao.com/category/30" onclick="return recordId('cid', '30')">技术之外</a>
+                </li>
+                <li class="b-nav-cname ">
+                    <a href="https://baijunyao.com/category/31" onclick="return recordId('cid', '31')">乱七八糟</a>
+                </li>
+                <li class="b-nav-cname ">
+                    <a href="https://baijunyao.com/chat">随言碎语</a>
+                </li>
+                <li class="b-nav-cname hidden-sm  ">
+                    <a href="https://baijunyao.com/git">开源项目</a>
+                </li>
+            </ul>
+            <ul id="b-login-word" class="nav navbar-nav navbar-right">
+                <li class="b-nav-cname b-nav-login">
+                    <div class="hidden-xs b-login-mobile"></div>
+                    <a href="javascript:;" onclick="login()">登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--导航条-->
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+    <!--<div class="container-fluid">-->
+        <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">后台管理</a>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>-->
+
+            <!--</ul>-->
+
+            <!--<p class="navbar-text navbar-right">Hello！<a href="#" class="navbar-link">用户名</a></p>-->
+        <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+
+    <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+<!--</nav>-->
+<!--菜单栏和内容区域-->
+<div class="col-sm-3 col-md-2 sidebar">
+    <!--菜单-->
+    <ul class="nav nav-sidebar">
+        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Export</a></li>
+    </ul>
+</div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <!--内容-->
+</div>
+</body>
+</html>

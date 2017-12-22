@@ -53,28 +53,35 @@
                     <a href="#">首页</a>
                 </li>
                 <li>
-                    <a href="#">资料</a>
+                    <a href="{:url('index/123')}">资料</a>
                 </li>
                 <li>
                     <a href="#">信息</a>
                 </li>
                 <li class="dropdown pull-right">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">下拉</a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">登录</a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">操作</a>
-                        </li>
-                        <li>
-                            <a href="#">设置栏目</a>
-                        </li>
-                        <li>
-                            <a href="#">更多设置</a>
-                        </li>
-                        <li class="divider">
-                        </li>
-                        <li>
-                            <a href="#">分割线</a>
-                        </li>
+                        <!--<li>-->
+                            <!--<a href="#">操作</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">设置栏目</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">更多设置</a>-->
+                        <!--</li>-->
+                        <!--<li class="divider">-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#">分割线</a>-->
+                        <!--</li>-->
+
+                        <form action="" method="post">
+                            <br>
+                            <li>用户名：<input type="text" placeholder="请输入用户名" name="username" value="username"></li>
+                            <li>密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" placeholder="请输入密码" name="password" value="password"></li>
+                            <li><input type="submit" value="登录"></li>
+                        </form>
                     </ul>
                 </li>
             </ul>
@@ -145,7 +152,7 @@
                                 <a href="#panel-92107" data-toggle="tab">第一部分</a>
                             </li>
                             <li>
-                                <a href="#panel-739122" data-toggle="tab">第二部分</a>
+                                <a href="#panel-739122" data-toggle="tab">我喜欢谁</a>
                             </li>
                         </ul>
                         <div class="tab-content">
@@ -156,7 +163,22 @@
                             </div>
                             <div class="tab-pane" id="panel-739122">
                                 <p>
-                                    第二部分内容.
+                                <div id="box">
+
+                                    <input type="checkbox" onclick="checkAll(this)">全选/全不选<br><br>
+                                    <input type="checkbox" value="">lq<br>
+                                    <input type="checkbox" value="">bb<br>
+                                    <input type="checkbox" value="">lp<br>
+                                    <input type="checkbox" value="">xbb<br>
+                                    <input type="checkbox" value="">dbb<br>
+                                    <input type="checkbox" value="">xn<br>
+
+                                </div>
+                                <script type="text/javascript">
+                                    function checkAll(obj){
+                                        $("#box input[type='checkbox']").prop('checked', $(obj).prop('checked'));
+                                    }
+                                </script>
                                 </p>
                             </div>
                         </div>
