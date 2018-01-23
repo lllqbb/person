@@ -8,7 +8,7 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
-
+//use think\Route;
 return [
     '__pattern__' => [
         'name' => '\w+',
@@ -19,3 +19,21 @@ return [
     ],
 
 ];
+//强制路由
+//前台
+//Route::get('/','index/Index/index');
+//Route::get('news','index/Index/news');
+//
+//
+////后台
+//
+//Route::get('admin','admin/Index/index');
+//Route::get('admin/login','admin/Index/login');
+//Route::post('admin/dologin','admin/Index/dologin');
+//
+//
+//
+////测试
+//Route::get('admin/ind',function(){
+//    return '123';
+//});

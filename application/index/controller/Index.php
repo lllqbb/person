@@ -11,4 +11,9 @@ class Index
         $view = new View();
         return $view->fetch();
     }
+    public function news()
+    {
+        $view = new View();
+        return $view->fetch();
+    }
 }
